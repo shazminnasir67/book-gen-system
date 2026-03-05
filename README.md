@@ -2,7 +2,7 @@
 
 A production-grade, AI-powered pipeline that transforms a single Excel row into a fully formatted, publication-ready book — complete with DOCX and PDF export, human-in-the-loop review gates, and automatic notifications.
 
-Built with **Google Gemini 2.5 Flash**, **Supabase**, and a **Finite State Machine** architecture that survives crashes, supports mid-book resume, and scales to multiple books in parallel.
+Built with **Google Gemini 3**, **Supabase**, and a **Finite State Machine** architecture that survives crashes, supports mid-book resume, and scales to multiple books in parallel.
 
 ---
 
@@ -73,7 +73,7 @@ The FSM pauses at configurable review points — outline approval, per-chapter f
 
 | Layer | Technology |
 |---|---|
-| LLM | Google Gemini 2.5 Flash |
+| LLM | Google Gemini 3 |
 | Database | Supabase (PostgreSQL) |
 | Storage | Supabase Storage |
 | Input | Excel (openpyxl) |
@@ -139,7 +139,7 @@ All foreign keys enforced. `chapters` uses a versioned unique constraint so chap
 ### 1. Clone & Install
 
 ```bash
-git clone https://github.com/your-username/book-gen-system.git
+git clone https://github.com/shazminnasir67/book-gen-system.git
 cd book-gen-system
 pip install -r requirements.txt
 ```
@@ -154,7 +154,7 @@ Edit `.env`:
 
 ```env
 GEMINI_API_KEY=your_gemini_api_key
-GEMINI_MODEL=gemini-2.5-flash
+GEMINI_MODEL=gemini-3
 
 SUPABASE_URL=https://your-project.supabase.co
 SUPABASE_SERVICE_KEY=your_supabase_service_key
